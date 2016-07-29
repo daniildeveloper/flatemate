@@ -1,0 +1,11 @@
+daniiltserin_adwertisment_board_ad:
+    resource: "@daniiltserinAdwertismentBoardBundle/Resources/config/routing/adwertismentsingle.yml"
+    prefix:   /ad
+
+daniiltserin_adwertisment_board_homepage:
+    path:     /
+    defaults: { _controller: daniiltserinAdwertismentBoardBundle:Default:index }
+
+daniiltserin_adwertisment_board_user:
+        resource: "@daniiltserinAdwertismentBoardBundle/Resources/config/routing/user.yml"
+        prefix:   /user

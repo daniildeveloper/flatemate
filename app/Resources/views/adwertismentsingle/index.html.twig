@@ -1,0 +1,63 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>AdwertismentSingle list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Authorid</th>
+                <th>Header</th>
+                <th>Price</th>
+                <th>Text</th>
+                <th>City</th>
+                <th>Street</th>
+                <th>Map</th>
+                <th>Rooms</th>
+                <th>Phone</th>
+                <th>Mark</th>
+                <th>Floor</th>
+                <th>Photo</th>
+                <th>Qgender</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for adwertismentSingle in adwertismentSingles %}
+            <tr>
+                <td><a href="{{ path('ad_show', { 'id': adwertismentSingle.id }) }}">{{ adwertismentSingle.id }}</a></td>
+                <td>{{ adwertismentSingle.authorId }}</td>
+                <td>{{ adwertismentSingle.header }}</td>
+                <td>{{ adwertismentSingle.price }}</td>
+                <td>{{ adwertismentSingle.text }}</td>
+                <td>{{ adwertismentSingle.city }}</td>
+                <td>{{ adwertismentSingle.street }}</td>
+                <td>{{ adwertismentSingle.map }}</td>
+                <td>{{ adwertismentSingle.rooms }}</td>
+                <td>{{ adwertismentSingle.phone }}</td>
+                <td>{{ adwertismentSingle.mark }}</td>
+                <td>{{ adwertismentSingle.floor }}</td>
+                <td>{{ adwertismentSingle.photo }}</td>
+                <td>{{ adwertismentSingle.qGender }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('ad_show', { 'id': adwertismentSingle.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('ad_edit', { 'id': adwertismentSingle.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('ad_new') }}">Create a new entry</a>
+        </li>
+    </ul>
+{% endblock %}

@@ -1,0 +1,49 @@
+daniiltserin\AdwertismentBoardBundle\Entity\AdwertismentSingle:
+    type: entity
+    table: null
+    repositoryClass: daniiltserin\AdwertismentBoardBundle\Repository\AdwertismentSingleRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        authorId:
+            type: integer
+            column: author_id
+        header:
+            type: string
+            length: '120'
+        price:
+            type: integer
+        text:
+            type: text
+        city:
+            type: string
+            length: '60'
+        street:
+            type: string
+            length: '120'
+            nullable: true
+        map:
+            type: text
+            nullable: true
+        rooms:
+            type: integer
+            nullable: true
+        phone:
+            type: integer
+        mark:
+            type: integer
+        floor:
+            type: integer
+            nullable: true
+        photo:
+            type: string
+            length: 255
+        qGender:
+            type: integer
+            nullable: true
+            column: q_gender
+    lifecycleCallbacks: {  }

@@ -1,0 +1,80 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>AdwertismentSingle</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ adwertismentSingle.id }}</td>
+            </tr>
+            <tr>
+                <th>Authorid</th>
+                <td>{{ adwertismentSingle.authorId }}</td>
+            </tr>
+            <tr>
+                <th>Header</th>
+                <td>{{ adwertismentSingle.header }}</td>
+            </tr>
+            <tr>
+                <th>Price</th>
+                <td>{{ adwertismentSingle.price }}</td>
+            </tr>
+            <tr>
+                <th>Text</th>
+                <td>{{ adwertismentSingle.text }}</td>
+            </tr>
+            <tr>
+                <th>City</th>
+                <td>{{ adwertismentSingle.city }}</td>
+            </tr>
+            <tr>
+                <th>Street</th>
+                <td>{{ adwertismentSingle.street }}</td>
+            </tr>
+            <tr>
+                <th>Map</th>
+                <td>{{ adwertismentSingle.map }}</td>
+            </tr>
+            <tr>
+                <th>Rooms</th>
+                <td>{{ adwertismentSingle.rooms }}</td>
+            </tr>
+            <tr>
+                <th>Phone</th>
+                <td>{{ adwertismentSingle.phone }}</td>
+            </tr>
+            <tr>
+                <th>Mark</th>
+                <td>{{ adwertismentSingle.mark }}</td>
+            </tr>
+            <tr>
+                <th>Floor</th>
+                <td>{{ adwertismentSingle.floor }}</td>
+            </tr>
+            <tr>
+                <th>Photo</th>
+                <td>{{ adwertismentSingle.photo }}</td>
+            </tr>
+            <tr>
+                <th>Qgender</th>
+                <td>{{ adwertismentSingle.qGender }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('ad_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('ad_edit', { 'id': adwertismentSingle.id }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}

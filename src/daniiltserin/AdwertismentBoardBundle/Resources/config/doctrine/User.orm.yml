@@ -1,0 +1,39 @@
+daniiltserin\AdwertismentBoardBundle\Entity\User:
+    type: entity
+    table: null
+    repositoryClass: daniiltserin\AdwertismentBoardBundle\Repository\UserRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        name:
+            type: string
+            length: '120'
+        lastname:
+            type: string
+            length: '120'
+            nullable: true
+        gender:
+            type: integer
+        phone:
+            type: integer
+        phoneWhatsapp:
+            type: integer
+            nullable: true
+            column: phone_whatsapp
+        phoneViber:
+            type: string
+            length: '60'
+            column: phone_viber
+        socialLinks:
+            type: text
+            nullable: true
+            column: social_links
+        email:
+            type: string
+            length: '120'
+            unique: true
+    lifecycleCallbacks: {  }

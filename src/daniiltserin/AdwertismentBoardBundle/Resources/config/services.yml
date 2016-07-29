@@ -1,0 +1,4 @@
+services:
+#    daniiltserin_adwertisment_board.example:
+#        class: daniiltserin\AdwertismentBoardBundle\Example
+#        arguments: ["@service_id", "plain_value", %parameter%]
